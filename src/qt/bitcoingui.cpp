@@ -53,6 +53,7 @@
 #include <QFileDialog>
 #include <QDesktopServices>
 #include <QTimer>
+#include <QMimeData>
 
 #include <QDragEnterEvent>
 #include <QUrl>
