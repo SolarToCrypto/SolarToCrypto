@@ -9,7 +9,7 @@
 #include <QFont>
 #include <QLineEdit>
 #include <QUrl>
-#include <QTextDocument> // For Qt::escape
+//#include <QTextDocument> // For Qt::escape
 #include <QAbstractItemView>
 #include <QApplication>
 #include <QClipboard>
@@ -113,7 +113,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
 {
-    QString escaped = Qt::escape(str);
+    QString escaped = str.toHtmlEscaped();
     if(fMultiLine)
     {
         escaped = escaped.replace("\n", "<br>\n");
